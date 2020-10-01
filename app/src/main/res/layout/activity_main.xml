@@ -10,11 +10,13 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="10dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="80dp"
-        android:text="TheApp"
-        android:textSize="50dp"
+        android:text="MFS2020Companion"
+        android:textSize="40dp"
+        android:textColor="#00B7FF"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,8 +28,9 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="0dp"
         android:layout_marginRight="0dp"
-        android:text="Version 1.0"
+        android:text="Version 0.1"
         android:textSize="10dp"
+        android:textColor="#00B7FF"
         app:layout_constraintEnd_toEndOf="@+id/textView1"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +43,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="www.theapp.com"
+        android:text="by Marco Zanetti"
         android:textSize="15dp"
+        android:textColor="#00B7FF"
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
@@ -92,7 +96,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
 
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/mfs2020logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
