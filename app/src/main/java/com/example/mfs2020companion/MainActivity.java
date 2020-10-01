@@ -1,10 +1,12 @@
-package com.example.myapplication;
+package com.example.mfs2020companion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import com.example.mfs2020companion.R;
 
 public class MainActivity extends AppCompatActivity {
 
