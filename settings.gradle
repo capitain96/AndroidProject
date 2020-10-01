@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "MFS2020 companion"
