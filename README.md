@@ -27,3 +27,13 @@ Since I am not fully sure which skillsets we will aquire in this course some goa
 ---
 
 # Description of current features:
+
+---
+
+# Archieving the mandatory Points:
+<ul>
+  <li>Functionality</li>
+  <li>Persistence</li>
+  <li>Using webservices</li>
+  <li>Layouts</li>
+</ul>
