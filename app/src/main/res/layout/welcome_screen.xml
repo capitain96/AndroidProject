@@ -43,52 +43,18 @@
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
-    <Switch
-        android:id="@+id/keepMeLoggedIn"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="0dp"
-        android:text="keep me logged in"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-
-    <EditText
-        android:id="@+id/mailAddress"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="10dp"
-        android:hint="email address"
-        android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="password"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/mailAddress"
-        app:layout_constraintStart_toStartOf="@+id/mailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/mailAddress" />
-
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Ready for departure!"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -105,9 +71,9 @@
         android:id="@+id/githubLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="304dp"
-        android:layout_marginLeft="304dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginLeft="292dp"
+        android:layout_marginTop="676dp"
         android:text="Github Link"
         android:textColor="#00B7FF"
         android:textSize="20dp"
@@ -122,9 +88,9 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@+id/textView5"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/githubLink"
+        app:layout_constraintEnd_toStartOf="@+id/githubLink"
+        app:layout_constraintTop_toTopOf="@+id/githubLink"
         app:srcCompat="@drawable/github_logo" />
 
 

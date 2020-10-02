@@ -21,14 +21,14 @@ public class WelcomeScreen extends AppCompatActivity {
 
         //proceeding to the main menu
         Button loginButton = findViewById(R.id.loginButton);
-        loginButton.setOnClickListener(v -> showSecondActivity());
+        loginButton.setOnClickListener(v -> showMainMenu());
 
         //clicklistener to get to my repository
         TextView urlTextView = findViewById(R.id.githubLink);
         urlTextView.setOnClickListener(v -> openUrl());
     }
 
-    private void showSecondActivity() {
+    private void showMainMenu() {
         //String email = emailEditText.getText().toString();
         Intent intent = MainMenu.createIntent(this);
         startActivity(intent);
