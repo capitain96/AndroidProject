@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">MFS2020 companion</string>
+
+    <string-array name="menu_items">
+        <item>Airports</item>
+        <item>Airplanes</item>
+        <item>Airplane finder</item>
+        <item>Notebook</item>
+        <item>Weather Data</item>
+        <item>Vatsim</item>
+        <item>Recent Patchnotes</item>
+    </string-array>
+
+    <string-array name="menu_descriptions">
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+    </string-array>
 </resources>
