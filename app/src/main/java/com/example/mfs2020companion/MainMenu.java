@@ -1,6 +1,7 @@
 package com.example.mfs2020companion;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
@@ -29,6 +30,8 @@ public class MainMenu extends AppCompatActivity {
         s2 = getResources().getStringArray(R.array.menu_descriptions);
 
         MyAdapter myAdapter = new MyAdapter(this, s1, s2, images);
+        menuItemsList.setAdapter(myAdapter);
+        menuItemsList.setLayoutManager((new LinearLayoutManager(this)));
     }
 
     public static Intent createIntent(Context context) {
