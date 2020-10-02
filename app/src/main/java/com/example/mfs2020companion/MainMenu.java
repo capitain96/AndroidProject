@@ -11,7 +11,7 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.MainMenu);
+        setContentView(R.layout.mainMenu);
     }
 
     public static Intent createIntent(Context context) {
