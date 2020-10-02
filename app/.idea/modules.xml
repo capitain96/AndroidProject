@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2049679462/MFS2020_companion.iml" filepath="$PROJECT_DIR$/.idea/modules/-2049679462/MFS2020_companion.iml" group="MFS2020_companion" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="MFS2020 companion/app" />
+    </modules>
+  </component>
+</project>

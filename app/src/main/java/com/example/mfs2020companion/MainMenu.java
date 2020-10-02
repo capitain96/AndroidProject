@@ -6,18 +6,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.mfs2020companion.R;
-
-public class SecondActivity extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.MainMenu);
     }
 
     public static Intent createIntent(Context context) {
-        Intent intent = new Intent(context, SecondActivity.class);
+        Intent intent = new Intent(context, MainMenu.class);
         //intent.putExtra(LOGIN_EMAIL_KEY, fromEmail);
         return intent;
     }
