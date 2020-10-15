@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".MainMenu"/>
         <activity android:name=".ChangeNotes" />
+        <activity android:name=".Vatsim" />
     </application>
 
 </manifest>

@@ -67,6 +67,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
                 break;
 
             case 5: //vatsim
+                startVatsim();
 
                 break;
 
@@ -89,6 +90,12 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
         final String WEBSITE_URL = "https://windy.com";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(WEBSITE_URL));
+        startActivity(intent);
+    }
+
+    private void startVatsim() {
+        Context context = this;
+        Intent intent = Vatsim.createIntent(context);
         startActivity(intent);
     }
 }
