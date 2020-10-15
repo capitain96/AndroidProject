@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -43,9 +44,51 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
 
     @Override
     public void onMenuItemClick(int position) {
-        Log.d(String.valueOf(position), "<-- this is the string value of position");
-        Intent intent = ChangeNotes.createIntent(this);
-        Log.d("TAG", "and now we start the activity");
+
+        switch(position) {
+            case 0://airports
+
+                break;
+
+            case 1://airplanes
+
+                break;
+
+            case 2://airplane finder
+
+                break;
+
+            case 3://notebook
+
+                break;
+
+            case 4://weather data
+                openWeathergUrl();
+                break;
+
+            case 5: //vatsim
+
+                break;
+
+            case 6: //changelog
+                openChangelogUrl();
+                break;
+
+        }
+
+    }
+
+    private void openChangelogUrl() {
+        final String WEBSITE_URL = "https://www.pcgames.de/Microsoft-Flight-Simulator-Spiel-15259/News/Termin-neues-Update-Patch-Notes-Aenderungen-1357087/"; //this is not the correct URL but the windows server is currently down
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(WEBSITE_URL));
+        startActivity(intent);
+    }
+
+    private void openWeathergUrl() {
+        final String WEBSITE_URL = "https://windy.com";
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(WEBSITE_URL));
         startActivity(intent);
     }
 }
