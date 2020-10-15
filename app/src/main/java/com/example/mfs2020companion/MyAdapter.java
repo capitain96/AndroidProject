@@ -1,6 +1,7 @@
 package com.example.mfs2020companion;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import static android.content.ContentValues.TAG;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
@@ -32,7 +35,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         ImageView myImage;
         OnMenuItemListener onMenuItemListener;
 
-        public MyViewHolder(@NonNull View itemView, OnMenuItemListener myOnMenuItemListener) {
+        public MyViewHolder(@NonNull View itemView, OnMenuItemListener onMenuItemListener) {
             super(itemView);
             myText1 = itemView.findViewById(R.id.menuItemTitle);
             myText2 = itemView.findViewById(R.id.menuItemDescription);
@@ -44,6 +47,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         @Override
         public void onClick(View v) {
+            Log.d(TAG, "onClick: ");
             onMenuItemListener.onMenuItemClick(getAdapterPosition());
         }
     }
