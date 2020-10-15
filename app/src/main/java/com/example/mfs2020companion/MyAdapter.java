@@ -47,7 +47,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         @Override
         public void onClick(View v) {
-            Log.d(TAG, "onClick: ");
             onMenuItemListener.onMenuItemClick(getAdapterPosition());
         }
     }
