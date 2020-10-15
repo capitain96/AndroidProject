@@ -16,8 +16,8 @@
 
             <ImageView
                 android:id="@+id/menuItemImage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 app:srcCompat="@mipmap/ic_launcher" />
 
             <TextView
@@ -28,7 +28,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Title"
-                android:textSize="20dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/menuItemImage"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"
-                android:textSize="10dp"
+                android:textSize="15dp"
                 app:layout_constraintStart_toStartOf="@+id/menuItemTitle"
                 app:layout_constraintTop_toBottomOf="@+id/menuItemTitle" />
 
