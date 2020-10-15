@@ -43,9 +43,9 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
 
     @Override
     public void onMenuItemClick(int position) {
-
-        Log.d(String.valueOf(position), "onMenuItemClick works ");
-        Intent intent = new Intent(this, ChangeNotes.class);
+        Log.d(String.valueOf(position), "<-- this is the string value of position");
+        Intent intent = ChangeNotes.createIntent(this);
+        Log.d("TAG", "and now we start the activity");
         startActivity(intent);
     }
 }
