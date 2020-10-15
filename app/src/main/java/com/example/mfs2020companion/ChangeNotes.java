@@ -25,8 +25,6 @@ public class ChangeNotes extends AppCompatActivity {
         setTitle("ChangeLog activity");
 
         //proceeding to the changelogs
-        Button loginButton = findViewById(R.id.changeLogButton);
-        loginButton.setOnClickListener(v -> openUrl());
     }
 
 
