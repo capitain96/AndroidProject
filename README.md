@@ -15,9 +15,6 @@ The Idea of this app is provide a small companion app for the game "Microsoft Fl
 ### Current list with planned features if possible:
 <ul>
   <li>Logbook (if possible connected to the provided one with automatic updates, but this will probably not be possible)</li>
-  <li>Links to weather data, or built in ATIS</li>
-  <li>Links to dedicated VATSIM data, like ILS approaches or transitions</li>
-  <li>Overwiev over recent patchnotes</li>
   <li>A plane matcher that chooses the perfect plane for your trip based on provided parameters</li>
   <li>Checklists for various planes</li>
 </ul>
@@ -29,6 +26,25 @@ Since I am not fully sure which skillsets we will aquire in this course some goa
 ---
 
 # Description of current features:
+
+## Links to dedicated VATSIM data, like ILS approaches or transitions
+
+Four buttons with important vatsim links can be found in the menu under "Vatsim"
+Todo: more data should be added here
+
+## Links to weather data, or built in ATIS
+
+Link to windy.com is implemented
+Maybe we can implement ATIS in the app for the current position or the closes airfield?
+maybe add a list of the closest arfields?
+
+## Overwiev over recent patchnotes
+
+Link to the last patchnote
+Possibility for a list with all patchnotes and all links to these full patchnotes
+maybe automate this? (Probably not with the current release format)
+
+
 
 ---
 
