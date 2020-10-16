@@ -1,5 +1,7 @@
 package com.example.mfs2020companion;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -35,7 +37,7 @@ public class PlaneMenu extends AppCompatActivity {
 
         planesRecyclerView = (RecyclerView) findViewById(R.id.planesRecyclerView);
 
-        planesRecyclerView.setHasFicexSize(true);
+        planesRecyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
         planesRecyclerView.setLayoutManager(layoutManager);
@@ -93,5 +95,10 @@ public class PlaneMenu extends AppCompatActivity {
             }
         }
         return new String(builder);
+    }
+
+    public static Intent createIntent(Context context) {
+        Intent intent = new Intent(context, PlaneMenu.class);
+        return intent;
     }
 }

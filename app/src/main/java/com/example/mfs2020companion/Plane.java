@@ -14,18 +14,21 @@ public class Plane {
     }
 
     public String getName() {
-        return name;
+        return (String)name;
     }
 
-    public int getCruiseSpeed() {
-        return cruiseSpeed;
+    public String getCruiseSpeed() {
+        Integer cruiseSpeed = (Integer) this.cruiseSpeed;
+        return cruiseSpeed.toString();
     }
 
-    public int getMaxAltitude() {
-        return maxAltitude;
+    public String getMaxAltitude() {
+        Integer maxAltitude = (Integer) this.maxAltitude;
+        return maxAltitude.toString();
     }
 
-    public int getRange() {
-        return range;
+    public String getRange() {
+        Integer range = (Integer) this.range;
+        return range.toString();
     }
 }

@@ -51,6 +51,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
                 break;
 
             case 1://airplanes
+                startPlaneMenu();
 
                 break;
 
@@ -96,6 +97,12 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
     private void startVatsim() {
         Context context = this;
         Intent intent = Vatsim.createIntent(context);
+        startActivity(intent);
+    }
+
+    private void startPlaneMenu() {
+        Context context = this;
+        Intent intent = PlaneMenu.createIntent(context);
         startActivity(intent);
     }
 }

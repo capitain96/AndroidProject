@@ -44,7 +44,7 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        switch (i) {
+        switch (viewType) {
             case TYPE :
 
             default:
@@ -53,16 +53,15 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
                 return new PlaneViewHolder((layoutView));
         }
-        return null;
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
-        int viewType = getItemViewType(i);
+        int viewType = getItemViewType(position);
 
         switch (viewType) {
-            case TYPE;
+            case TYPE:
             default:
 
                 PlaneViewHolder planeViewHolder = (PlaneViewHolder) holder;
@@ -73,11 +72,6 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 planeViewHolder.maxAltitude.setText(plane.getMaxAltitude());
                 planeViewHolder.range.setText(plane.getRange());
         }
-
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
     }
 

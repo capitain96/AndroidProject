@@ -19,6 +19,7 @@
         <activity android:name=".MainMenu"/>
         <activity android:name=".ChangeNotes" />
         <activity android:name=".Vatsim" />
+        <activity android:name=".PlaneMenu" />
     </application>
 
 </manifest>
