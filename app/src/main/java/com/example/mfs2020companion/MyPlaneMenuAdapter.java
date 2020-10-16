@@ -1,77 +1,88 @@
 package com.example.mfs2020companion;
 
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyPlaneMenuAdapter {
+import java.util.List;
 
+public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
+    private final int TYPE = 1;
+    private final Context context;
+    private final List<Object> listRecyclerItem;
 
-    String planeNames[], cruiseSpeed[]; //do you really want to do it this way? maybe do it as an object?
-    int images[]; //maybe as an object?
-    Context context;
-    private MyAdapter.OnMenuItemListener myOnMenuItemListener;
-
-    public MyAdapter(Context ct, String s1[], String s2[], int img[], MyAdapter.OnMenuItemListener myOnMenuItemListener) {
-        context = ct;
-        data1 = s1;
-        data2 = s2;
-        images = img;
-        this.myOnMenuItemListener = myOnMenuItemListener;
+    public MyPlaneMenuAdapter(Context context, List<Object> listRecyclerItem) {
+        this.context = context;
+        this.listRecyclerItem = listRecyclerItem;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener{
+    public class PlaneViewHolder extends RecyclerView.ViewHolder {
 
-        TextView myText1, myText2;
-        ImageView myImage;
-        MyAdapter.OnMenuItemListener onMenuItemListener;
+        private TextView name;
+        private TextView cruiseSpeed;
+        private TextView maxAltitude;
+        private TextView range;
+        //private int image; //don't know yet how to implement the image
 
-        public MyViewHolder(@NonNull View itemView, MyAdapter.OnMenuItemListener onMenuItemListener) {
-            super(itemView);
-            myText1 = itemView.findViewById(R.id.menuItemTitle);
-            myText2 = itemView.findViewById(R.id.menuItemDescription);
-            myImage = itemView.findViewById(R.id.menuItemImage);
-            this.onMenuItemListener = onMenuItemListener;
-
-            itemView.setOnClickListener(this);
+        public PlaneViewHolder(@NonNull View itemView) {
+            super (itemView);
+            name = (TextView) itemView.findViewById(R.id.textView);
+            cruiseSpeed = (TextView) itemView.findViewById(R.id.textView4);
+            maxAltitude = (TextView) itemView.findViewById(R.id.textView5);
+            range = (TextView) itemView.findViewById(R.id.textView6);
         }
 
-        @Override
-        public void onClick(View v) {
-            onMenuItemListener.onMenuItemClick(getAdapterPosition());
-        }
     }
 
     @NonNull
     @Override
-    public MyAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.menu_row, parent, false);
-        return new MyAdapter.MyViewHolder(view, myOnMenuItemListener);
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        switch (i) {
+            case TYPE :
+
+            default:
+
+                View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.plane_list_item, parent, false);
+
+                return new PlaneViewHolder((layoutView));
+        }
+        return null;
     }
 
     @Override
-    public void onBindViewHolder  (@NonNull MyAdapter.MyViewHolder holder, int position) {
-        holder.myText1.setText(data1[position]);
-        holder.myText2.setText(data2[position]);
-        holder.myImage.setImageResource(images[position]);
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+        int viewType = getItemViewType(i);
+
+        switch (viewType) {
+            case TYPE;
+            default:
+
+                PlaneViewHolder planeViewHolder = (PlaneViewHolder) holder;
+                Plane plane = (com.example.mfs2020companion.Plane) listRecyclerItem.get(position);
+
+                planeViewHolder.name.setText(plane.getName());
+                planeViewHolder.cruiseSpeed.setText(plane.getCruiseSpeed());
+                planeViewHolder.maxAltitude.setText(plane.getMaxAltitude());
+                planeViewHolder.range.setText(plane.getRange());
+        }
+
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
     }
 
     @Override
     public int getItemCount() {
-        return data1.length;
+        return listRecyclerItem.size();
     }
-
-    public interface OnMenuItemListener {
-        void onMenuItemClick(int position);
-    }
-
 }
