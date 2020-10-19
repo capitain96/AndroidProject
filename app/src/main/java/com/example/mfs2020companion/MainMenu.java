@@ -76,6 +76,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
                 break;
 
             case 4://weather data
+                requestPermission();
                 openWeatherUrl();
                 break;
 
@@ -101,12 +102,14 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
 
     private void openWeatherUrl() {
 
-        requestPermission();
+
         Log.d("TAG", "openWeatherUrl: requested permission");
 
         locationclient = LocationServices.getFusedLocationProviderClient((this));
 
-        if(ActivityCompat.checkSelfPermission(MainMenu.this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        if(ActivityCompat.checkSelfPermission(MainMenu.this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
 
         locationclient.getLastLocation().addOnSuccessListener(MainMenu.this, new OnSuccessListener<Location>() {
             @Override
@@ -114,6 +117,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
 
                 if(location != null) {
 
+                    Log.d("TAG", "getting location worked");
                     String websiteUrl = "https://windy.com/?"+ location.toString();
                     Log.d("LOCATION", location.toString());
                     Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -121,6 +125,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
                     startActivity(intent);
 
                 } else {
+                    Log.d("TAG", "getting location failed");
                     String websiteUrl = "https://windy.com/";
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setData(Uri.parse(websiteUrl));
