@@ -2,6 +2,7 @@ package com.example.mfs2020companion;
 
 
 import android.content.Context;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.File;
 import java.util.List;
 
 public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
@@ -71,7 +73,7 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             default:
 
                 PlaneViewHolder planeViewHolder = (PlaneViewHolder) holder;
-                Plane plane = (com.example.mfs2020companion.Plane) listRecyclerItem.get(position);
+                Plane plane = (Plane) listRecyclerItem.get(position);
 
                 planeViewHolder.name.setText(plane.getName());
                 planeViewHolder.cruiseSpeed.setText(plane.getCruiseSpeed());
@@ -79,8 +81,9 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 planeViewHolder.range.setText(plane.getRange());
 
                 String path = "R.drawable." + plane.getImagePath();
-                Log.d("PATH", path);
-                planeViewHolder.image.setImageResource(Integer.parseInt(path));
+                Uri uri = Uri.fromFile(new File(path));
+
+                //planeViewHolder.image.setImageResource(uri);
         }
 
     }
