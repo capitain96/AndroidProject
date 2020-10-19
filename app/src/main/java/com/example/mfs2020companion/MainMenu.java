@@ -1,14 +1,24 @@
 package com.example.mfs2020companion;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemListener{
     RecyclerView menuItemsList;
@@ -20,6 +30,8 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
             R.drawable.weather,
             R.drawable.vatsim,
             R.drawable.patchnotes};
+
+    private FusedLocationProviderClient locationclient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +76,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
                 break;
 
             case 4://weather data
-                openWeathergUrl();
+                openWeatherUrl();
                 break;
 
             case 5: //vatsim
@@ -87,11 +99,38 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
         startActivity(intent);
     }
 
-    private void openWeathergUrl() {
-        final String WEBSITE_URL = "https://windy.com";
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(WEBSITE_URL));
-        startActivity(intent);
+    private void openWeatherUrl() {
+
+        requestPermission();
+        Log.d("TAG", "openWeatherUrl: requested permission");
+
+        locationclient = LocationServices.getFusedLocationProviderClient((this));
+
+        if(ActivityCompat.checkSelfPermission(MainMenu.this, ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+
+        locationclient.getLastLocation().addOnSuccessListener(MainMenu.this, new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+
+                if(location != null) {
+
+                    String websiteUrl = "https://windy.com/?"+ location.toString();
+                    Log.d("LOCATION", location.toString());
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(websiteUrl));
+                    startActivity(intent);
+
+                } else {
+                    String websiteUrl = "https://windy.com/";
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(websiteUrl));
+                    startActivity(intent);
+                }
+
+            }
+        });
+
+
     }
 
     private void startVatsim() {
@@ -104,5 +143,10 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
         Context context = this;
         Intent intent = PlaneMenu.createIntent(context);
         startActivity(intent);
+    }
+
+    private void requestPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION},1);
+        Log.d("requestPermission", "I was called!");
     }
 }
