@@ -2,9 +2,11 @@ package com.example.mfs2020companion;
 
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,6 +31,7 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         private TextView cruiseSpeed;
         private TextView maxAltitude;
         private TextView range;
+        private ImageView image;
         //private int image; //don't know yet how to implement the image
 
         public PlaneViewHolder(@NonNull View itemView) {
@@ -37,6 +40,9 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             cruiseSpeed = (TextView) itemView.findViewById(R.id.textView4);
             maxAltitude = (TextView) itemView.findViewById(R.id.textView5);
             range = (TextView) itemView.findViewById(R.id.textView6);
+            image = (ImageView) itemView.findViewById(R.id.imageView2);
+
+
         }
 
     }
@@ -71,6 +77,10 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 planeViewHolder.cruiseSpeed.setText(plane.getCruiseSpeed());
                 planeViewHolder.maxAltitude.setText(plane.getMaxAltitude());
                 planeViewHolder.range.setText(plane.getRange());
+
+                String path = "R.drawable." + plane.getImagePath();
+                Log.d("PATH", path);
+                planeViewHolder.image.setImageResource(Integer.parseInt(path));
         }
 
     }

@@ -5,12 +5,14 @@ public class Plane {
     private final int cruiseSpeed;
     private final int maxAltitude;
     private final int range;
+    private final String imagePath;
 
-    public Plane(String name, int cruiseSpeed , int maxAltitude, int range) {
+    public Plane(String name, int cruiseSpeed , int maxAltitude, int range, String imagePath) {
         this.name = name;
         this.cruiseSpeed = cruiseSpeed;
         this.maxAltitude = maxAltitude;
         this.range = range;
+        this.imagePath = imagePath;
     }
 
     public String getName() {
@@ -30,5 +32,9 @@ public class Plane {
     public String getRange() {
         Integer range = (Integer) this.range;
         return range.toString();
+    }
+
+    public String getImagePath() {
+        return this.imagePath;
     }
 }

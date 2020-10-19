@@ -63,8 +63,9 @@ public class PlaneMenu extends AppCompatActivity {
                 int cruiseSpeed = itemObj.getInt("cruiseSpeed");
                 int maxAltitude = itemObj.getInt("maxAltitude");
                 int range = itemObj.getInt("range");
+                String imagePath = itemObj.getString("imagePath");
 
-                Plane plane = new Plane(name, cruiseSpeed, maxAltitude, range);
+                Plane plane = new Plane(name, cruiseSpeed, maxAltitude, range, imagePath);
                 viewItems.add(plane);
             }
         } catch (Exception e) {

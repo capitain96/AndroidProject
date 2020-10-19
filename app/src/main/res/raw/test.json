@@ -3,10 +3,12 @@
     "name": "747",
     "cruiseSpeed": 600,
     "maxAltitude": 30000,
-    "range": 7500
+    "range": 7500,
+    "imagePath" : "first.image"
   } , {
   "name": "Tecnam p2002",
   "cruiseSpeed": 100,
   "maxAltitude": 14000,
-  "range": 500
+  "range": 500,
+  "imagePath" : "Second Image"
 }]

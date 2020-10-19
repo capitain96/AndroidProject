@@ -12,7 +12,7 @@
         android:layout_height="110dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/${}" />
 
     <TextView
         android:id="@+id/textView"
