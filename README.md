@@ -35,8 +35,7 @@ Todo: more data should be added here
 ## Links to weather data, or built in ATIS
 
 Link to windy.com is implemented
-Maybe we can implement ATIS in the app for the current position or the closes airfield?
-maybe add a list of the closest arfields?
+Now I strive to implement automatic location of the user and attachment of that data to the windy.com link to provide accurate weather info (Need help, doesn't work)
 
 ## Overwiev over recent patchnotes
 
@@ -44,7 +43,11 @@ Link to the last patchnote
 Possibility for a list with all patchnotes and all links to these full patchnotes
 maybe automate this? (Probably not with the current release format)
 
+## List of available planes
 
+This was implemented using an adapter which reads a JSON with the plane info.
+CUrrently the pictures can't be displayed that way (Need help, doesn't work)
+This will be implemented for the airports aswell.
 
 ---
 
