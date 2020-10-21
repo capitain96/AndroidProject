@@ -1,15 +1,19 @@
 package com.example.mfs2020companion;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class WelcomeScreen extends AppCompatActivity {
     private final static String WEBSITE_URL = "https://github.com/capitain96/AndroidProject";
+    private boolean nightmode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,24 @@ public class WelcomeScreen extends AppCompatActivity {
         //clicklistener to get to my repository
         TextView urlTextView = findViewById(R.id.githubLink);
         urlTextView.setOnClickListener(v -> openUrl());
+
+        Button nightmodeButton = findViewById(R.id.nightmode);
+        nightmodeButton.setOnClickListener(v -> {AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+        View background = findViewById(R.id.welcome_screen);
+
+        if(nightmode) {
+            background.setBackgroundResource(R.drawable.runwaybyday);
+            nightmodeButton.setText("@string/nightmode"); //problematic gotta fix this
+            nightmode = false;
+        } else {
+            background.setBackgroundResource(R.drawable.runwaybynight);
+            nightmodeButton.setText("@string/daymode");
+            nightmode = true;
+        }
+
+
+        });
     }
 
     private void showMainMenu() {

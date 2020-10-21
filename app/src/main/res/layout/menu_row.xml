@@ -12,7 +12,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/textAlt">
+
 
             <ImageView
                 android:id="@+id/menuItemImage"
@@ -30,6 +32,7 @@
                 android:text="Title"
                 android:textSize="30dp"
                 android:textStyle="bold"
+                android:textColor="@color/mainText"
                 app:layout_constraintStart_toEndOf="@+id/menuItemImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:text="Description"
                 android:textSize="15dp"
+                android:textColor="@color/mainText"
                 app:layout_constraintStart_toStartOf="@+id/menuItemTitle"
                 app:layout_constraintTop_toBottomOf="@+id/menuItemTitle" />
 

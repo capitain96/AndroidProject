@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/welcome_screen"
     android:layout_height="match_parent"
     tools:context=".WelcomeScreen"
-    android:background="@drawable/runway">
+    android:background="@drawable/runwaybyday">
 
     <TextView
         android:id="@+id/textView1"
@@ -15,7 +16,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="80dp"
         android:text="@string/app_name"
-        android:textColor="#00B7FF"
+        android:textColor="@color/mainText"
         android:textSize="40dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Version"
-        android:textColor="#00B7FF"
+        android:textColor="@color/mainText"
         android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
@@ -39,7 +40,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:text="@string/author_name"
-        android:textColor="#00B7FF"
+        android:textColor="@color/mainText"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="@+id/textView1"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
@@ -50,6 +51,8 @@
         android:layout_height="wrap_content"
         android:text="@string/go_to_menu"
         android:textSize="14dp"
+        android:textColor="@color/mainText"
+        android:background="@color/textAlt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -99,6 +102,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/nightmode"
+        android:textColor="@color/mainText"
+        android:background="@color/textAlt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />

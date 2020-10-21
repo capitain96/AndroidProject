@@ -32,5 +32,6 @@
     <string name="vatsim">Gehe zu Vatsim</string>
     <string name="simbrief">Gehe zu Simbrief</string>
     <string name="flightplan">FLugplan aufgeben</string>
-    <string name="nightmode">Zum Dunkel Modus wechseln</string>
+    <string name="nightmode">Zum dunklen Modus wechseln</string>
+    <string name="daymode">Zum hellen Modus wechseln</string>
 </resources>
