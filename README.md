@@ -49,7 +49,21 @@ This was implemented using an adapter which reads a JSON with the plane info.
 CUrrently the pictures can't be displayed that way (Need help, doesn't work)
 This will be implemented for the airports aswell.
 
+## Other Features
+
+<ul>
+  <li>Dark Mode (Sort of)</li>
+  <li>German translation</li>
+ </ul>
+
 ---
+
+# Current Issues:
+<ul>
+  <li>location service is not working</li>
+  <li>Dark mode has hiccups</li>
+  <li>Adapter JASON for image paths not working</li>
+ </ul>
 
 # Archieving the mandatory Points:
 <ul>
