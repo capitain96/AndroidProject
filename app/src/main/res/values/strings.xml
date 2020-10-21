@@ -4,6 +4,14 @@
     <string name="go_to_menu">Ready for departure!</string>
     <string name="Version" translatable="false">Version 0.1</string>
     <string name="github">To Github</string>
+    <string name="type">Type:</string>
+    <string name="cruise">Cruise:</string>
+    <string name="max_Alt">Max Alt:</string>
+    <string name="range">Range:</string>
+    <string name="vattastic">Go to Vattastic</string>
+    <string name="vatsim">Go to Vatsim</string>
+    <string name="flightplan">File a flightplan</string>
+    <string name="simbrief">Go to Simbrief</string>
 
     <string-array name="menu_items">
         <item>Airports</item>

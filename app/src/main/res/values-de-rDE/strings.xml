@@ -24,4 +24,12 @@
         <item>placeholder</item>
     </string-array>
     <string name="github">Zum Github</string>
+    <string name="type" >Typ:</string>
+    <string name="cruise" >Reiseflug:</string>
+    <string name="max_Alt" >Max Höhe:</string>
+    <string name="range" >"Reichweite: "</string>
+    <string name="vattastic">Gehe zu Vattastic</string>
+    <string name="vatsim">Gehe zu Vatsim</string>
+    <string name="simbrief">Gehe zu Simbrief</string>
+    <string name="flightplan">FLugplan aufgeben</string>
 </resources>
