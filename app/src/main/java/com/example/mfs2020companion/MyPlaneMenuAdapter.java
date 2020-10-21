@@ -75,10 +75,10 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 PlaneViewHolder planeViewHolder = (PlaneViewHolder) holder;
                 Plane plane = (Plane) listRecyclerItem.get(position);
 
-                planeViewHolder.name.setText(plane.getName());
-                planeViewHolder.cruiseSpeed.setText(plane.getCruiseSpeed());
-                planeViewHolder.maxAltitude.setText(plane.getMaxAltitude());
-                planeViewHolder.range.setText(plane.getRange());
+                planeViewHolder.name.append(plane.getName());
+                planeViewHolder.cruiseSpeed.append("\n" + plane.getCruiseSpeed());
+                planeViewHolder.maxAltitude.append("\n" + plane.getMaxAltitude());
+                planeViewHolder.range.append("\n" + plane.getRange());
 
                 String path = "R.drawable." + plane.getImagePath();
                 Uri uri = Uri.fromFile(new File(path));

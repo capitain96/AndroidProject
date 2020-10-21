@@ -72,12 +72,11 @@
         android:id="@+id/githubLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginLeft="300dp"
         android:layout_marginTop="500dp"
         android:text="@string/github"
         android:textColor="#00B7FF"
         android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

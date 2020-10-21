@@ -23,7 +23,7 @@
         <item>placeholder</item>
         <item>placeholder</item>
     </string-array>
-    <string name="github">Zum Github</string>
+    <string name="github">Zum Github Repository</string>
     <string name="type" >Typ:</string>
     <string name="cruise" >Reiseflug:</string>
     <string name="max_Alt" >Max Höhe:</string>
