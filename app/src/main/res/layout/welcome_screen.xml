@@ -93,5 +93,15 @@
         app:layout_constraintTop_toTopOf="@+id/githubLink"
         app:srcCompat="@drawable/github_logo" />
 
+    <Button
+        android:id="@+id/nightmode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/nightmode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

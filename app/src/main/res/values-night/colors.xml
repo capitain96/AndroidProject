@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">#123e59</color>
     <color name="colorAccent">#8e9faa</color>
 
-    <color name="mainText">#123e59</color>
+    <color name="mainText">#ffffff</color>
     <color name="textAlt">#009fde</color>
-    <color name="mainBackground">#ffffff</color>
+    <color name="mainBackground">#123e59</color>
 
 
 </resources>
