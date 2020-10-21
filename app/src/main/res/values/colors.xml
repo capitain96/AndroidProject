@@ -6,7 +6,7 @@
 
     <color name="mainText">#123e59</color>
     <color name="textAlt">#009fde</color>
-    <color name="mainBackground">#ffffff</color>
+    <color name="mainBackground">#009fde</color>
 
 
 </resources>
