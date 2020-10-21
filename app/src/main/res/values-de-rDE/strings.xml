@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MFS2020 Begleiter</string>
+    <string name="author_name">von Marco Zanetti</string>
+    <string name="go_to_menu">Bereit zum Start!</string>
+
+    <string-array name="menu_items">
+        <item>Flugplätze</item>
+        <item>Luftfahrzeuge</item>
+        <item>Luftfahrzeug Suche</item>
+        <item>Notizbuch</item>
+        <item>Wetterdaten</item>
+        <item>Vatsim</item>
+        <item>Kürzliche Updates</item>
+    </string-array>
+
+    <string-array name="menu_descriptions">
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+        <item>placeholder</item>
+    </string-array>
+    <string name="github">Zum Github</string>
+</resources>

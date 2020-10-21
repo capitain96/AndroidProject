@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">MFS2020 companion</string>
+    <string name="author_name">by Marco Zanetti</string>
+    <string name="go_to_menu">Ready for departure!</string>
+    <string name="Version" translatable="false">Version 0.1</string>
+    <string name="github">To Github</string>
 
     <string-array name="menu_items">
         <item>Airports</item>
