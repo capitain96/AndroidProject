@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Zürich Kloten",
+    "ICAOCode": "LSZH",
+    "airportCode": "ZRH",
+    "runways": "16/34",
+    "imagePath" : "switzerland.png"
+  } , {
+  "name": "Wien Schwechat",
+  "ICAOCode": "LOWW",
+  "airportCode": "WIE",
+  "runways": "29/11, 34/16",
+  "imagePath" : "austria.png"
+}]
