@@ -34,4 +34,8 @@
     <string name="flightplan">FLugplan aufgeben</string>
     <string name="nightmode">Zum dunklen Modus wechseln</string>
     <string name="daymode">Zum hellen Modus wechseln</string>
+    <string name="name">Name</string>
+    <string name="ICAOCode">ICAO Code</string>
+    <string name="airportCode">Flughafen code</string>
+    <string name="runways">Pisten</string>
 </resources>
