@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class WelcomeScreen extends AppCompatActivity {
     private final static String WEBSITE_URL = "https://github.com/capitain96/AndroidProject";
-    boolean nightmode = false;
+    private static boolean nightmode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,8 @@ public class WelcomeScreen extends AppCompatActivity {
 
 
         nightmodeButton.setOnClickListener(v -> ChangeDarkMode());
+
+        UpdateVisuals();
     }
 
     private void showMainMenu() {
@@ -51,19 +53,26 @@ public class WelcomeScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void ChangeDarkMode() {
+    private void UpdateVisuals() {
         Button nightmodeButton = findViewById(R.id.nightmode);
         View background = findViewById(R.id.welcome_screen);
+
         if(nightmode) {
-            background.setBackgroundResource(R.drawable.runwaybyday);
-            nightmodeButton.setText(R.string.nightmode); //problematic gotta fix this
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            nightmode = false;
-        } else {
             background.setBackgroundResource(R.drawable.runwaybynight);
             nightmodeButton.setText(R.string.daymode);
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            background.setBackgroundResource(R.drawable.runwaybyday);
+            nightmodeButton.setText(R.string.nightmode);
+        }
+    }
+
+    private void ChangeDarkMode() {
+        if(nightmode) {
+            nightmode = false;
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        } else {
             nightmode = true;
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }
     }
 }
