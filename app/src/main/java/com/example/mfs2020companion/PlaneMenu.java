@@ -79,7 +79,7 @@ public class PlaneMenu extends AppCompatActivity {
         try {
 
             String jsonString = null;
-            inputStream = getResources().openRawResource(R.raw.test);
+            inputStream = getResources().openRawResource(R.raw.airplanes);
             BufferedReader bufferedReader = new BufferedReader(
                     new InputStreamReader( inputStream, "UTF-8")
             );
