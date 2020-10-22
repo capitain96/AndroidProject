@@ -3,15 +3,15 @@ package com.example.mfs2020companion;
 public class Airport {
     private final String name;
     private final String ICAOCode;
-    private final int airportCode;
-    private final int runways;
+    private final String airportCode;
+    private final String runways;
     private final String imagePath;
 
-    public Airport(String name, int cruiseSpeed , int maxAltitude, int range, String imagePath) {
+    public Airport(String name, String ICAOCode , String airportCode, String runways, String imagePath) {
         this.name = name;
-        this.cruiseSpeed = cruiseSpeed;
-        this.maxAltitude = maxAltitude;
-        this.range = range;
+        this.ICAOCode = ICAOCode;
+        this.airportCode = airportCode;
+        this.runways = runways;
         this.imagePath = imagePath;
     }
 
@@ -30,7 +30,7 @@ public class Airport {
     public String getRunways() {
         return (String)runways;
     }
-    
+
     public String getImagePath() {
         return this.imagePath;
     }
