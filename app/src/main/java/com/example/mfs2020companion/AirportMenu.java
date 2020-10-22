@@ -20,7 +20,7 @@ import java.util.List;
 
 public class AirportMenu extends AppCompatActivity {
 
-    private RecyclerView planesRecyclerView;
+    private RecyclerView airportRecyclerView;
     private List<Object> viewItems = new ArrayList<>();
 
     private RecyclerView.Adapter myAdapter;
@@ -30,17 +30,17 @@ public class AirportMenu extends AppCompatActivity {
 
         //normal on create layout loading
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.plane_menu);
+        setContentView(R.layout.airport_menu);
 
-        planesRecyclerView = (RecyclerView) findViewById(R.id.planesRecyclerView);
+        airportRecyclerView = (RecyclerView) findViewById(R.id.planesRecyclerView); //this needs to be fixed!!
 
-        planesRecyclerView.setHasFixedSize(true);
+        airportRecyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
-        planesRecyclerView.setLayoutManager(layoutManager);
+        airportRecyclerView.setLayoutManager(layoutManager);
 
         myAdapter = new MyPlaneMenuAdapter(this, viewItems);
-        planesRecyclerView.setAdapter(myAdapter);
+        airportRecyclerView.setAdapter(myAdapter);
 
         addItemsFromJSON();
 
@@ -57,13 +57,13 @@ public class AirportMenu extends AppCompatActivity {
                 JSONObject itemObj = jsonArray.getJSONObject(i);
 
                 String name = itemObj.getString("name");
-                int cruiseSpeed = itemObj.getInt("cruiseSpeed");
-                int maxAltitude = itemObj.getInt("maxAltitude");
-                int range = itemObj.getInt("range");
+                String ICAOCode = itemObj.getString("ICAOCode");
+                String airportCode = itemObj.getString("airportCode");
+                String runways = itemObj.getString("runways");
                 String imagePath = itemObj.getString("imagePath");
 
-                Plane plane = new Plane(name, cruiseSpeed, maxAltitude, range, imagePath);
-                viewItems.add(plane);
+                Airport airport = new Airport(name, ICAOCode, airportCode, runways, imagePath);
+                viewItems.add(airport);
             }
         } catch (Exception e) {
 
@@ -79,7 +79,7 @@ public class AirportMenu extends AppCompatActivity {
         try {
 
             String jsonString = null;
-            inputStream = getResources().openRawResource(R.raw.test);
+            inputStream = getResources().openRawResource(R.raw.test); //here you need to set it to airports
             BufferedReader bufferedReader = new BufferedReader(
                     new InputStreamReader( inputStream, "UTF-8")
             );
