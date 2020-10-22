@@ -38,11 +38,11 @@ public class MyAirportMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
 
         public AirportViewHolder(@NonNull View itemView) {
             super (itemView);
-            name = (TextView) itemView.findViewById(R.id.textView);
-            ICAOCode = (TextView) itemView.findViewById(R.id.textView4);
-            airportCode = (TextView) itemView.findViewById(R.id.textView5);
-            runways = (TextView) itemView.findViewById(R.id.textView6);
-            image = (ImageView) itemView.findViewById(R.id.imageView2);
+            name = (TextView) itemView.findViewById(R.id.textView20);
+            ICAOCode = (TextView) itemView.findViewById(R.id.textView24);
+            airportCode = (TextView) itemView.findViewById(R.id.textView25);
+            runways = (TextView) itemView.findViewById(R.id.textView26);
+            image = (ImageView) itemView.findViewById(R.id.imageView22);
 
 
         }

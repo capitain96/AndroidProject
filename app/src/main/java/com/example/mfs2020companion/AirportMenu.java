@@ -32,14 +32,14 @@ public class AirportMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.airport_menu);
 
-        airportRecyclerView = (RecyclerView) findViewById(R.id.planesRecyclerView); //this needs to be fixed!!
+        airportRecyclerView = (RecyclerView) findViewById(R.id.airportRecyclerView); //this needs to be fixed!!
 
         airportRecyclerView.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
         airportRecyclerView.setLayoutManager(layoutManager);
 
-        myAdapter = new MyPlaneMenuAdapter(this, viewItems);
+        myAdapter = new MyAirportMenuAdapter(this, viewItems);
         airportRecyclerView.setAdapter(myAdapter);
 
         addItemsFromJSON();
