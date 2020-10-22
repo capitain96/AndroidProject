@@ -27,21 +27,21 @@ public class MyAirportMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
         this.listRecyclerItem = listRecyclerItem;
     }
 
-    public class PlaneViewHolder extends RecyclerView.ViewHolder {
+    public class AirportViewHolder extends RecyclerView.ViewHolder {
 
         private TextView name;
-        private TextView cruiseSpeed;
-        private TextView maxAltitude;
-        private TextView range;
+        private TextView ICAOCode;
+        private TextView airportCode;
+        private TextView runways;
         private ImageView image;
         //private int image; //don't know yet how to implement the image
 
-        public PlaneViewHolder(@NonNull View itemView) {
+        public AirportViewHolder(@NonNull View itemView) {
             super (itemView);
             name = (TextView) itemView.findViewById(R.id.textView);
-            cruiseSpeed = (TextView) itemView.findViewById(R.id.textView4);
-            maxAltitude = (TextView) itemView.findViewById(R.id.textView5);
-            range = (TextView) itemView.findViewById(R.id.textView6);
+            ICAOCode = (TextView) itemView.findViewById(R.id.textView4);
+            airportCode = (TextView) itemView.findViewById(R.id.textView5);
+            runways = (TextView) itemView.findViewById(R.id.textView6);
             image = (ImageView) itemView.findViewById(R.id.imageView2);
 
 
@@ -57,9 +57,9 @@ public class MyAirportMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
 
             default:
 
-                View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.plane_list_item, parent, false);
+                View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.airport_list_item, parent, false);
 
-                return new PlaneViewHolder((layoutView));
+                return new AirportViewHolder((layoutView));
         }
     }
 
@@ -72,18 +72,18 @@ public class MyAirportMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
             case TYPE:
             default:
 
-                PlaneViewHolder planeViewHolder = (PlaneViewHolder) holder;
-                Plane plane = (Plane) listRecyclerItem.get(position);
+                AirportViewHolder airportViewHolder = (AirportViewHolder) holder;
+                Airport airport = (Airport) listRecyclerItem.get(position);
 
-                planeViewHolder.name.append(plane.getName());
-                planeViewHolder.cruiseSpeed.append("\n" + plane.getCruiseSpeed());
-                planeViewHolder.maxAltitude.append("\n" + plane.getMaxAltitude());
-                planeViewHolder.range.append("\n" + plane.getRange());
+                airportViewHolder.name.append(airport.getName());
+                airportViewHolder.ICAOCode.append("\n" + airport.getICAOCode());
+                airportViewHolder.airportCode.append("\n" + airport.getAirportCode());
+                airportViewHolder.runways.append("\n" + airport.getRunways());
 
-                String path = plane.getImagePath();
+                String path = airport.getImagePath();
                 byte[] data = readImageFromAssets(path);
                 Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-                planeViewHolder.image.setImageBitmap(bitmap);
+                airportViewHolder.image.setImageBitmap(bitmap);
         }
 
     }
