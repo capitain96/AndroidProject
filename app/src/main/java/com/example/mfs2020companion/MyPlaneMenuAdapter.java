@@ -4,8 +4,6 @@ package com.example.mfs2020companion;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.io.File;
 import java.io.InputStream;
 import java.util.List;
 
@@ -37,7 +34,6 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         private TextView maxAltitude;
         private TextView range;
         private ImageView image;
-        //private int image; //don't know yet how to implement the image
 
         public PlaneViewHolder(@NonNull View itemView) {
             super (itemView);

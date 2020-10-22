@@ -34,7 +34,6 @@ public class MyAirportMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
         private TextView airportCode;
         private TextView runways;
         private ImageView image;
-        //private int image; //don't know yet how to implement the image
 
         public AirportViewHolder(@NonNull View itemView) {
             super (itemView);
