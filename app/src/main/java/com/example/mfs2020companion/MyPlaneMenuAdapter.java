@@ -96,9 +96,9 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         return listRecyclerItem.size();
     }
 
-    private byte[] readImageFromAssets(String uri) {
+    private byte[] readImageFromAssets(String path) {
         try {
-            InputStream is = context.getAssets().open("android-mascot.png");
+            InputStream is = context.getAssets().open(path);
             byte[] imageBytes = new byte[is.available()];
             is.read(imageBytes);
             is.close();

@@ -4,11 +4,11 @@
     "cruiseSpeed": 600,
     "maxAltitude": 30000,
     "range": 7500,
-    "imagePath" : "b747"
+    "imagePath" : "b747.jpg"
   } , {
   "name": "Tecnam p2002",
   "cruiseSpeed": 100,
   "maxAltitude": 14000,
   "range": 500,
-  "imagePath" : "tecnam"
+  "imagePath" : "tecnam.jpg"
 }]
