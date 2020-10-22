@@ -83,7 +83,7 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 String path = "R.drawable." + plane.getImagePath();
                 Uri uri = Uri.fromFile(new File(path));
 
-                //planeViewHolder.image.setImageResource(uri);
+                //planeViewHolder.image.setImage(uri);
         }
 
     }
@@ -92,4 +92,6 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public int getItemCount() {
         return listRecyclerItem.size();
     }
+
+
 }

@@ -56,13 +56,13 @@ public class WelcomeScreen extends AppCompatActivity {
         View background = findViewById(R.id.welcome_screen);
         if(nightmode) {
             background.setBackgroundResource(R.drawable.runwaybyday);
-            nightmodeButton.setText("@string/nightmode"); //problematic gotta fix this
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            nightmodeButton.setText(getString(R.string.nightmode)); //problematic gotta fix this
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             nightmode = false;
         } else {
             background.setBackgroundResource(R.drawable.runwaybynight);
-            nightmodeButton.setText("@string/daymode");
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            nightmodeButton.setText(getString(R.string.daymode));
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             nightmode = true;
         }
     }
