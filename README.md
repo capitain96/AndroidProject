@@ -6,9 +6,6 @@ The Idea of this app is provide a small companion app for the game "Microsoft Fl
 
 ### Current list of features that I strive to implement:
 <ul>
-  <li>List of all Aircrafts with technical imformation</li>
-  <li>List of the hand built Airports with technical imformation</li>
-  <li>Section with useful links to webpages of third party content</li>
   <li>small notebook to plan ideas for future flights</li>
 </ul>
 
@@ -30,12 +27,11 @@ Since I am not fully sure which skillsets we will aquire in this course some goa
 ## Links to dedicated VATSIM data, like ILS approaches or transitions
 
 Four buttons with important vatsim links can be found in the menu under "Vatsim"
-Todo: more data should be added here
 
 ## Links to weather data, or built in ATIS
 
 Link to windy.com is implemented
-Now I strive to implement automatic location of the user and attachment of that data to the windy.com link to provide accurate weather info (Need help, doesn't work)
+And it does automatically bring up the weather data of your current location. (this needs a little fine tuning)
 
 ## Overwiev over recent patchnotes
 
@@ -46,8 +42,11 @@ maybe automate this? (Probably not with the current release format)
 ## List of available planes
 
 This was implemented using an adapter which reads a JSON with the plane info.
-CUrrently the pictures can't be displayed that way (Need help, doesn't work)
-This will be implemented for the airports aswell.
+
+## List of your favorite Airports
+
+This was implemented using an adapter which reads a JSON with the airport info.
+So you can simply add your favorite airports to that json file and upload it.
 
 ## Other Features
 
@@ -60,9 +59,8 @@ This will be implemented for the airports aswell.
 
 # Current Issues:
 <ul>
-  <li>location service is not working</li>
-  <li>Dark mode has hiccups</li>
-  <li>Adapter JASON for image paths not working</li>
+  <li>The list of airplanes is funky, fix this by changing the view</li>
+  <li>Just to be sure we should also do that with the airport view</li>
  </ul>
 
 # Archieving the mandatory Points:
