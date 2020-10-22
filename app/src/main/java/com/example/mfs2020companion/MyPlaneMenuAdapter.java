@@ -2,6 +2,8 @@ package com.example.mfs2020companion;
 
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 
 public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
@@ -80,10 +83,10 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 planeViewHolder.maxAltitude.append("\n" + plane.getMaxAltitude());
                 planeViewHolder.range.append("\n" + plane.getRange());
 
-                String path = "R.drawable." + plane.getImagePath();
-                Uri uri = Uri.fromFile(new File(path));
-
-                //planeViewHolder.image.setImage(uri);
+                String path = plane.getImagePath();
+                byte[] data = readImageFromAssets(path);
+                Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+                planeViewHolder.image.setImageBitmap(bitmap);
         }
 
     }
@@ -92,6 +95,20 @@ public class MyPlaneMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     public int getItemCount() {
         return listRecyclerItem.size();
     }
+
+    private byte[] readImageFromAssets(String uri) {
+        try {
+            InputStream is = context.getAssets().open("android-mascot.png");
+            byte[] imageBytes = new byte[is.available()];
+            is.read(imageBytes);
+            is.close();
+
+            return imageBytes;
+        } catch (Exception ignored) {
+            return new byte[0];
+        }
+    }
+
 
 
 }
