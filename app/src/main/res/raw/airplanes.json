@@ -1,11 +1,58 @@
-[
-  {
+[{
+  "name": "Airbus A320neo",
+  "cruiseSpeed": 445,
+  "maxAltitude": 39800,
+  "range": 3500,
+  "imagePath" : "airbus-a320neo.jpg"
+}, {
+"name": "Boeing 747-8 Intercontinental",
+"cruiseSpeed": 493,
+"maxAltitude": 43100,
+"range": 8000,
+"imagePath" : "b747conti.jpg"
+}, {
+"name": "Boeing 787-10 Dreamliner",
+"cruiseSpeed": 495,
+"maxAltitude": 41100,
+"range": 6430,
+"imagePath" : "b787d.jpg"
+}, {
+"name": "Beechcraft King Air 350i",
+"cruiseSpeed": 244,
+"maxAltitude": 35000,
+"range": 1806,
+"imagePath" : "kingair.webp"
+}, {
+"name": "Cessna 208 B Grand Caravan",
+"cruiseSpeed": 195,
+"maxAltitude": 25000,
+"range": 964,
+"imagePath" : "caravan.webp"
+}, {
+"name": "Daher TBM 930",
+"cruiseSpeed": 330,
+"maxAltitude": 31000,
+"range": 1730,
+"imagePath" : "msfs2020-daher-tbm-930.jpg"
+}, {
+"name": "Cessna Citation CJ4",
+"cruiseSpeed": 451,
+"maxAltitude": 45000,
+"range": 2165,
+"imagePath" : "cj14.jpg"
+}, {
+"name": "Cessna Citation Longitude",
+"cruiseSpeed": 483,
+"maxAltitude": 45000,
+"range": 3500,
+"imagePath" : "longitude.jpg"
+},  {
     "name": "747",
     "cruiseSpeed": 600,
     "maxAltitude": 30000,
     "range": 7500,
     "imagePath" : "b747.jpg"
-  } , { //all the props
+  } , {
   "name": "Aviat Pitts Special S2S",
   "cruiseSpeed": 150,
   "maxAltitude": 15000,
@@ -59,149 +106,82 @@
   "maxAltitude": 31000,
   "range": 700,
   "imagePath" : "cubX.jpg"
-}, /*{
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "Diamond DA40NG",
+  "cruiseSpeed": 125,
+  "maxAltitude": 16400,
+  "range": 940,
+  "imagePath" : "Da40.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "Diamond DA40-TDI",
+  "cruiseSpeed": 120,
+  "maxAltitude": 16400,
+  "range": 741,
+  "imagePath" : "da40tdi.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "Diamond DA62",
+  "cruiseSpeed": 171,
+  "maxAltitude": 20000,
+  "range": 1283,
+  "imagePath" : "da62.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "Diamond DV20",
+  "cruiseSpeed": 110,
+  "maxAltitude": 13120,
+  "range": 630,
+  "imagePath" : "dv20.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "EXTRA 330LT",
+  "cruiseSpeed": 150,
+  "maxAltitude": 10000,
+  "range": 600,
+  "imagePath" : "extra300.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "Flight Design CTLS",
+  "cruiseSpeed": 120,
+  "maxAltitude": 15000,
+  "range": 780,
+  "imagePath" : "CTLS.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "ICON A5",
+  "cruiseSpeed": 85,
+  "maxAltitude": 15000,
+  "range": 427,
+  "imagePath" : "a5.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "JMB VL-3",
+  "cruiseSpeed": 130,
+  "maxAltitude": 13000,
+  "range": 690,
+  "imagePath" : "vl-3.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "Pipistrel Virus SW 121",
+  "cruiseSpeed": 90,
+  "maxAltitude": 16000,
+  "range": 642,
+  "imagePath" : "pipistrel.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "Robin CAP 10",
+  "cruiseSpeed": 135,
+  "maxAltitude": 16000,
+  "range": 650,
+  "imagePath" : "robin.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "Robin DR400-100 Cadet",
+  "cruiseSpeed": 115,
+  "maxAltitude": 14000,
+  "range": 550,
+  "imagePath" : "cadet.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
+  "name": "EX Zlin Savage Cub",
+  "cruiseSpeed": 91,
+  "maxAltitude": 14400,
+  "range": 377,
+  "imagePath" : "savage.jpg"
 }, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}, {
-  "name": "",
-  "cruiseSpeed": ,
-  "maxAltitude": ,
-  "range": ,
-  "imagePath" : ""
-}*/
-]
+  "name": "Zlin Shock Ultra",
+  "cruiseSpeed": 78,
+  "maxAltitude": 15750,
+  "range": 323,
+  "imagePath" : "zlin.jpg"
+}]
