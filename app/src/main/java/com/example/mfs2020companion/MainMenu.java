@@ -95,7 +95,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
     }
 
     private void openChangelogUrl() {
-        final String WEBSITE_URL = "https://www.pcgames.de/Microsoft-Flight-Simulator-Spiel-15259/News/Termin-neues-Update-Patch-Notes-Aenderungen-1357087/"; //this is not the correct URL but the windows server is currently down
+        final String WEBSITE_URL = "https://www.flightsimulator.com/october-15th-2020-development-update/"; //change this URL to the german counterpart?
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(WEBSITE_URL));
         startActivity(intent);

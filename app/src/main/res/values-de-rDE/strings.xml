@@ -15,13 +15,13 @@
     </string-array>
 
     <string-array name="menu_descriptions">
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
+        <item>Liste meiner lieblings Flugplätzen</item>
+        <item>Liste meiner installierten Flugzeuge</item>
+        <item>DIESE FUNKTION IST AKTUELL NICHT VERFÜGBAR</item>
+        <item>DIESE FUNKTION IST AKTUELL NICHT VERFÜGBAR</item>
+        <item>Aktuelle Wetterdaten an ihrer Position</item>
+        <item>Wichtige Links zu Vatsim</item>
+        <item>Kürzliche Patchnotes</item>
     </string-array>
     <string name="github">Zum Github Repository</string>
     <string name="type" >Typ:</string>

@@ -30,12 +30,12 @@
     </string-array>
 
     <string-array name="menu_descriptions">
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
-        <item>placeholder</item>
+        <item>A list of my favorite Airports</item>
+        <item>A list of currently installed Airplanes</item>
+        <item>FEATURE NOT AVAILABLE YET</item>
+        <item>FEATURE NOT AVAILABLE YET</item>
+        <item>Weather data of your current location</item>
+        <item>Most important Vatsim links</item>
+        <item>Link to the last official patchnotes</item>
     </string-array>
 </resources>
