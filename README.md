@@ -61,6 +61,8 @@ So you can simply add your favorite airports to that json file and upload it.
 <ul>
   <li>The list of airplanes is funky, fix this by changing the view</li>
   <li>Just to be sure we should also do that with the airport view</li>
+  <li>Translate the whole notes app into german</li>
+  <li></li>
  </ul>
 
 # Archieving the mandatory Points:
