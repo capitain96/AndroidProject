@@ -16,6 +16,7 @@ import java.util.List;
 public class NotesMenu extends AppCompatActivity {
 
     static List<Object> notes = new ArrayList<>();
+    static ArrayAdapter arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +24,11 @@ public class NotesMenu extends AppCompatActivity {
         setContentView(R.layout.notes_menu);
 
         ListView notesListView;
-        notesListView = findViewById(R.id.notes_list); //make it a recycler view
+        notesListView = (ListView) findViewById(R.id.notes_list); //make it a recycler view
 
         notes.add("Example note");
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
+        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
 
         notesListView.setAdapter(arrayAdapter);
 
