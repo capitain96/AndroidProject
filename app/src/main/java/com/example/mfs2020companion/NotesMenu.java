@@ -88,9 +88,9 @@ public class NotesMenu extends AppCompatActivity {
 
                 new AlertDialog.Builder(NotesMenu.this)
                         .setIcon(android.R.drawable.ic_dialog_alert)
-                        .setTitle("Are you sure?")
-                        .setMessage("Do you want to delete this note?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setTitle(R.string.areYouSure)
+                        .setMessage(R.string.deleteMessage)
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 notes.remove(position);
@@ -103,7 +103,7 @@ public class NotesMenu extends AppCompatActivity {
                                 sharedPreferences.edit().putStringSet("notes",set).apply();
                             }
                         })
-                        .setNegativeButton("no", null)
+                        .setNegativeButton(R.string.no, null)
                         .show();
 
                 return true;

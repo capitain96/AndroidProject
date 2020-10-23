@@ -18,7 +18,7 @@
         <item>Liste meiner lieblings Flugplätzen</item>
         <item>Liste meiner installierten Flugzeuge</item>
         <item>DIESE FUNKTION IST AKTUELL NICHT VERFÜGBAR</item>
-        <item>DIESE FUNKTION IST AKTUELL NICHT VERFÜGBAR</item>
+        <item>Ein persönliches Notizbuch</item>
         <item>Aktuelle Wetterdaten an ihrer Position</item>
         <item>Wichtige Links zu Vatsim</item>
         <item>Kürzliche Patchnotes</item>
@@ -38,4 +38,9 @@
     <string name="ICAOCode">ICAO Code</string>
     <string name="airportCode">Flughafen code</string>
     <string name="runways">Pisten</string>
+    <string name="addNote">Notiz hinzufügen</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="deleteMessage">Möchten Sie diese Notiz löschen?</string>
+    <string name="areYouSure">Sind Sie sich sicher?</string>
 </resources>
