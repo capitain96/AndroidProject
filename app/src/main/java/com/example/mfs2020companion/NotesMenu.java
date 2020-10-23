@@ -57,7 +57,15 @@ public class NotesMenu extends AppCompatActivity {
 
         HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
 
-        notes.add("Example note");
+        if (set == null) {
+
+            notes.add("Example note");
+
+        } else {
+            notes = new ArrayList(set);
+        }
+
+
 
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, notes);
 
