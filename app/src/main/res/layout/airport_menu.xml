@@ -9,6 +9,8 @@
         android:id="@+id/airportRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="@color/mainText"
+        android:background="@color/mainBackground"
         tools:listitem="@layout/airport_list_item"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp" />
