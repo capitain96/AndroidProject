@@ -1,6 +1,8 @@
 package com.example.mfs2020companion;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,7 +12,11 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashSet;
+
 public class NoteEditor extends AppCompatActivity {
+
+    int noteID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +26,16 @@ public class NoteEditor extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.editTextTextMultiLine2);
 
         Intent intent = getIntent();
-        final int noteID = intent.getIntExtra("NoteID", -1);
+        noteID = intent.getIntExtra("NoteID", -1);
 
         if(noteID != -1) {
             editText.setText((CharSequence) NotesMenu.notes.get(noteID));
+
+        } else {
+
+            NotesMenu.notes.add("");
+            noteID = NotesMenu.notes.size() - 1;
+            NotesMenu.arrayAdapter.notifyDataSetChanged();
 
         }
 
@@ -38,6 +50,11 @@ public class NoteEditor extends AppCompatActivity {
 
                 NotesMenu.notes.set(noteID, String.valueOf(s));
                 NotesMenu.arrayAdapter.notifyDataSetChanged();
+
+                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.mfs2020companion", Context.MODE_PRIVATE);
+
+                HashSet<String> set = new HashSet<String>(NotesMenu.notes);
+                sharedPreferences.edit().putStringSet("notes",set).apply();
 
             }
 
