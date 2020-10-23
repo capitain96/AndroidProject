@@ -73,7 +73,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
                 break;
 
             case 3://notebook
-
+                openNotebook();
                 break;
 
             case 4://weather data
@@ -160,5 +160,10 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION},1);
         Log.d("requestPermission", "I was called!");
+    }
+
+    private void openNotebook(){
+        Intent intent = new Intent(getApplicationContext(), NotesMenu.class);
+        startActivity(intent);
     }
 }

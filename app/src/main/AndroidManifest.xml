@@ -23,6 +23,8 @@
         <activity android:name=".Vatsim" />
         <activity android:name=".PlaneMenu" />
         <activity android:name=".AirportMenu" />
+        <activity android:name=".NotesMenu" />
+        <activity android:name=".NoteEditor" />
     </application>
 
 </manifest>
