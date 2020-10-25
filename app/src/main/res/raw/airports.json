@@ -1,0 +1,68 @@
+[
+  {
+    "name": "FLughafen Zürich Kloten",
+    "ICAOCode": "LSZH",
+    "airportCode": "ZRH",
+    "runways": "10/28, 14/32, 16/34",
+    "imagePath" : "switzerland.png"
+  } , {
+  "name": "Flughafen Wien Schwechat",
+  "ICAOCode": "LOWW",
+  "airportCode": "WIE",
+  "runways": "11/29, 16/34",
+  "imagePath" : "austria.png"
+} , {
+  "name": "Flughafen München Franz Josef Strauss",
+  "ICAOCode": "EDMM",
+  "airportCode": "MUC",
+  "runways": "08R/26L, 08L/26R",
+  "imagePath" : "germany.png"
+} , {
+  "name": "People's Airport St.Gallen Altenrhein",
+  "ICAOCode": "LSZR",
+  "airportCode": "ACH",
+  "runways": "10R/28L, 10L/28R",
+  "imagePath" : "switzerland.png"
+} , {
+  "name": "FLughafen Bern-Belp",
+  "ICAOCode": "LSZB",
+  "airportCode": "BRN",
+  "runways": "14/32, 14R/32L",
+  "imagePath" : "switzerland.png"
+} , {
+  "name": "",
+  "ICAOCode": "",
+  "airportCode": "",
+  "runways": "",
+  "imagePath" : ""
+} , {
+  "name": "Aéroport International de Geneve",
+  "ICAOCode": "LSGG",
+  "airportCode": "GVA",
+  "runways": "04/22, 04L/22R",
+  "imagePath" : "switzerland.png"
+} , {
+  "name": "Flughafen Frankfurt am Main",
+  "ICAOCode": "EDDF",
+  "airportCode": "FRA",
+  "runways": "07R/25L, 07C/05C, 07L/25R, 18",
+  "imagePath" : "germany.png"
+} , {
+  "name": "Flughafen Memmingen",
+  "ICAOCode": "EDJA",
+  "airportCode": "FMM",
+  "runways": "06/24",
+  "imagePath" : "germany.png"
+} , {
+  "name": "Flughafen Salzburg",
+  "ICAOCode": "LOWS",
+  "airportCode": "SZG",
+  "runways": "15/33",
+  "imagePath" : "austria.png"
+} , {
+  "name": "Flughafen Innsbruck",
+  "ICAOCode": "LOWI",
+  "airportCode": "INN",
+  "runways": "08/26, 08/26",
+  "imagePath" : "austria.png"
+}]
