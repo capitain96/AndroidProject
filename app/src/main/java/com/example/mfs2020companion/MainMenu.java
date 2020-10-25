@@ -95,7 +95,7 @@ public class MainMenu extends AppCompatActivity implements MyAdapter.OnMenuItemL
     }
 
     private void openChangelogUrl() {
-        final String WEBSITE_URL = "https://www.flightsimulator.com/october-15th-2020-development-update/"; //change this URL to the german counterpart?
+        final String WEBSITE_URL = getString(R.string.patchnotesLink); //change this URL to the german counterpart?
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(WEBSITE_URL));
         startActivity(intent);
