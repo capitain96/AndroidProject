@@ -30,12 +30,6 @@
   "runways": "14/32, 14R/32L",
   "imagePath" : "switzerland.png"
 } , {
-  "name": "",
-  "ICAOCode": "",
-  "airportCode": "",
-  "runways": "",
-  "imagePath" : ""
-} , {
   "name": "Aéroport International de Geneve",
   "ICAOCode": "LSGG",
   "airportCode": "GVA",
