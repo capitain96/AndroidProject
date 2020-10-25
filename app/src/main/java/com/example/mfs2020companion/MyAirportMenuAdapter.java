@@ -74,10 +74,10 @@ public class MyAirportMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
                 AirportViewHolder airportViewHolder = (AirportViewHolder) holder;
                 Airport airport = (Airport) listRecyclerItem.get(position);
 
-                airportViewHolder.name.append(airport.getName());
-                airportViewHolder.ICAOCode.append("\n" + airport.getICAOCode());
-                airportViewHolder.airportCode.append("\n" + airport.getAirportCode());
-                airportViewHolder.runways.append("\n" + airport.getRunways());
+                airportViewHolder.name.setText(airport.getName());
+                airportViewHolder.ICAOCode.setText(airport.getICAOCode());
+                airportViewHolder.airportCode.setText(airport.getAirportCode());
+                airportViewHolder.runways.setText(airport.getRunways());
 
                 String path = airport.getImagePath();
                 byte[] data = readImageFromAssets(path);
