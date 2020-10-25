@@ -1,6 +1,6 @@
 [
   {
-    "name": "FLughafen Zürich Kloten",
+    "name": "Flughafen Zürich Kloten",
     "ICAOCode": "LSZH",
     "airportCode": "ZRH",
     "runways": "10/28, 14/32, 16/34",
@@ -24,7 +24,7 @@
   "runways": "10R/28L, 10L/28R",
   "imagePath" : "switzerland.png"
 } , {
-  "name": "FLughafen Bern-Belp",
+  "name": "Flughafen Bern-Belp",
   "ICAOCode": "LSZB",
   "airportCode": "BRN",
   "runways": "14/32, 14R/32L",

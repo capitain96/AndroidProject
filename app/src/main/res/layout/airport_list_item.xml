@@ -25,7 +25,7 @@
         android:text=""
         android:textColor="@color/mainText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toEndOf="@+id/imageView22"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -62,16 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:background="@color/mainBackground"
-        android:text="@string/name"
-        android:textColor="@color/mainText"
-        app:layout_constraintStart_toEndOf="@+id/imageView22"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView12"
         android:layout_width="100dp"
         android:layout_height="0dp"
@@ -95,9 +85,9 @@
         android:id="@+id/textView14"
         android:layout_width="100dp"
         android:layout_height="0dp"
+        android:background="@color/mainBackground"
         android:text="@string/ICAOCode"
         android:textColor="@color/mainText"
-        android:background="@color/mainBackground"
         app:layout_constraintStart_toEndOf="@+id/imageView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        tools:layout_editor_absoluteY="30dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
