@@ -79,7 +79,7 @@ public class AirportMenu extends AppCompatActivity {
         try {
 
             String jsonString = null;
-            inputStream = getResources().openRawResource(R.raw.test2); //here you need to set it to airports
+            inputStream = getResources().openRawResource(R.raw.airports); //here you need to set it to airports
             BufferedReader bufferedReader = new BufferedReader(
                     new InputStreamReader( inputStream, "UTF-8")
             );
