@@ -89,5 +89,5 @@
         android:text="@string/ICAOCode"
         android:textColor="@color/mainText"
         app:layout_constraintStart_toEndOf="@+id/imageView22"
-        tools:layout_editor_absoluteY="30dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 </androidx.constraintlayout.widget.ConstraintLayout>
